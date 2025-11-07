@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <!-- Header Section -->
+        <TextView
+            android:text="Add New Sighting"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
+            android:letterSpacing="0.02"
+            android:textColor="#1B5E20"
+            android:paddingBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="Document your discovery"
+            android:textSize="14sp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="#4CAF50"
+            android:paddingBottom="32dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!-- Name Input -->
+        <TextView
+            android:text="Species Name"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="#2E7D32"
+            android:paddingBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/nameInput"
+            android:hint="Enter species name"
+            android:textColorHint="#81C784"
+            android:textColor="#1B5E20"
+            android:background="@drawable/input_field"
+            android:padding="16dp"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:autofillHints="name"
+            android:inputType="textCapWords" />
+
+        <!-- Type Input -->
+        <TextView
+            android:text="Type"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="#2E7D32"
+            android:paddingBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/typeInput"
+            android:hint="Plant, Animal, Bird, Insect..."
+            android:textColorHint="#81C784"
+            android:textColor="#1B5E20"
+            android:background="@drawable/input_field"
+            android:padding="16dp"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:autofillHints="none"
+            android:inputType="textCapWords" />
+
+        <!-- Location Input -->
+        <TextView
+            android:text="Location"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="#2E7D32"
+            android:paddingBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/locationInput"
+            android:hint="Where did you see it?"
+            android:textColorHint="#81C784"
+            android:textColor="#1B5E20"
+            android:background="@drawable/input_field"
+            android:padding="16dp"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:autofillHints="none"
+            android:inputType="textCapWords" />
+
+        <!-- Date Input -->
+        <TextView
+            android:text="Date"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="#2E7D32"
+            android:paddingBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/dateInput"
+            android:hint="YYYY-MM-DD"
+            android:textColorHint="#81C784"
+            android:textColor="#1B5E20"
+            android:background="@drawable/input_field"
+            android:padding="16dp"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:autofillHints="none"
+            android:inputType="date" />
+
+        <!-- Save Button -->
+        <Button
+            android:id="@+id/saveButton"
+            android:text="Save Sighting"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/button_primary"
+            android:elevation="4dp"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+</ScrollView>
