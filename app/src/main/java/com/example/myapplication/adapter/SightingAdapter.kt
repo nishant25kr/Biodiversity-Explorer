@@ -32,8 +32,17 @@ class SightingAdapter(private val sightingList: List<Sighting>) :
         holder.typeText.text = sighting.type
         holder.locationText.text = sighting.location
         holder.dateText.text = sighting.date
-        holder.imageView.setImageResource(sighting.imageResId)
+
+        // Handle image safely
+        if (!sighting.imageUri.isNullOrEmpty()) {
+            val uri = android.net.Uri.parse(sighting.imageUri)
+            holder.imageView.setImageURI(uri)
+        } else {
+            holder.imageView.setImageResource(R.drawable.ic_launcher_foreground) // optional fallback
+        }
     }
+
+
 
     override fun getItemCount(): Int = sightingList.size
 }

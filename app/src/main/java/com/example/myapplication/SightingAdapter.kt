@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -31,8 +32,15 @@ class SightingAdapter(private val sightingList: List<Sighting>) :
         holder.typeText.text = sighting.type
         holder.locationText.text = sighting.location
         holder.dateText.text = sighting.date
-        holder.imageView.setImageResource(sighting.imageResId)
+
+        if (!sighting.imageUri.isNullOrEmpty()) {
+            holder.imageView.setImageURI(Uri.parse(sighting.imageUri))
+        } else {
+            holder.imageView.setImageResource(R.drawable.ic_launcher_foreground)
+        }
     }
+
+
 
     override fun getItemCount(): Int = sightingList.size
 }

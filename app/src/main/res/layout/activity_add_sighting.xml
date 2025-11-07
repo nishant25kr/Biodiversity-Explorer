@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_background"
@@ -28,11 +29,83 @@
             android:textSize="14sp"
             android:fontFamily="sans-serif-light"
             android:textColor="#4CAF50"
-            android:paddingBottom="32dp"
+            android:paddingBottom="24dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
-        <!-- Name Input -->
+        <!-- Photo Section with CardView -->
+        <TextView
+            android:text="Species Photo"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="#2E7D32"
+            android:paddingBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="#FFFFFF">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- Placeholder with icon -->
+                <LinearLayout
+                    android:id="@+id/placeholderLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="#F1F8E9">
+
+                    <TextView
+                        android:text="📷"
+                        android:textSize="48sp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:text="No photo selected"
+                        android:textSize="14sp"
+                        android:fontFamily="sans-serif-light"
+                        android:textColor="#81C784"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <!-- Actual preview image -->
+                <ImageView
+                    android:id="@+id/previewImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Species photo preview"
+                    android:visibility="gone" />
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/addPhotoButton"
+            android:text="📸 Select or Capture Photo"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
+            android:textAllCaps="false"
+            android:textColor="#2E7D32"
+            android:background="@drawable/button_secondary"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Species Name Input -->
         <TextView
             android:text="Species Name"
             android:textSize="12sp"
@@ -139,7 +212,7 @@
         <!-- Save Button -->
         <Button
             android:id="@+id/saveButton"
-            android:text="Save Sighting"
+            android:text="💾 Save Sighting"
             android:layout_width="match_parent"
             android:layout_height="64dp"
             android:textSize="18sp"

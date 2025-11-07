@@ -5,5 +5,5 @@ data class Sighting(
     val type: String,
     val location: String,
     val date: String,
-    val imageResId: Int
+    val imageUri: String? = null
 )
